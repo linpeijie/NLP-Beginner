@@ -1,0 +1,7 @@
+1.lr模型无法拟合：
+在该参数模式下，逻辑回归模型无法拟合：
+LogisticRegressionCV(multi_class="ovr", fit_intercept=True, Cs=np.logspace(-2, 2, 20), cv=2, penalty="l2",
+                              solver="lbfgs", tol=0.01)
+研究发现，由于在高维度下，lbfgs效果较差，因此换成随机梯度下降法来拟合函数,并且使用并行计算来提高计算速度
+
+2.初步分析，损失函数无法拟合的原因，部分原因在于特征矩阵过于稀疏的问题，这也是BoW模型需要面对的一个问题。
