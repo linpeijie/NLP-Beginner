@@ -1,5 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
+import torch as t
+from torch import nn
+from torch.autograd import Variable as V
 
 
 class Perceptron:
@@ -40,7 +43,6 @@ if __name__ == '__main__':
 
     W0 = np.array([0, 0])
     b0 = 0
-
     per = Perceptron(W0, b0)
     w, b = per.fit(X, Y)
 
